@@ -1,7 +1,7 @@
 import { parse } from 'csv-parse';
 import fs from 'node:fs';
 
-const csvPath = new URL('./tasks.csv', import.meta.url);
+const csvPath = new URL('./ExcelTest.csv', import.meta.url);
 
 const stream = fs.createReadStream(csvPath);
 
@@ -27,11 +27,7 @@ async function run() {
         description,
       })
     })
-
-    // Uncomment this line to see the import working in slow motion (open the db.json)
-    // await wait(1000)
   }
-
 }
 
 run()
